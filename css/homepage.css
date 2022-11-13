@@ -1,0 +1,175 @@
+/* Homepage */
+
+.hl {
+    background-color: #ffffff;
+}
+
+.hl_favorites {
+    background-color: #7189A1;
+}
+
+.welcome {
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: center;
+    min-height: 60vh;
+}
+
+.welcome_content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+
+}
+
+.welcome_content-logo {
+    position: absolute;
+    bottom: -18em;
+    right: 36em;
+    min-width: 330px;
+    width : 50vw;
+    height : auto;
+    
+}
+
+
+.welcome_content-shop  {
+    position: absolute;
+    bottom: -18em;
+    right: 36em;
+}
+
+.jacket-categorys {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    
+}
+
+.jacket-categorys > * {
+    flex: 1;
+}
+
+.jacket_imgae {
+    width: 100%;
+    margin: auto;
+}
+
+.jacket_women,
+.jacket_men {
+    margin:50px;
+}
+
+.button-container {
+    display: inline;
+    position: relative;
+}
+
+.button-container a {
+    position: absolute;
+    bottom: 3em;
+    right: -3em;
+}
+
+.menu-items-default {
+    font-size: xx-large;
+    display: block;
+    padding: 10px 30px;
+}
+
+.product-fill {
+    min-width: 279px;
+    width: 10vw;
+    height: auto;
+    text-align: center;
+}
+
+
+.product_size {
+    margin: 20px;
+    min-width: 239px;
+    width: 10vw;
+    height: auto;
+}
+
+.hl_favorites{
+    text-align: center;
+    padding: 50px;
+    margin-right: 20px;
+    padding-top: 150px;
+}
+
+.hl_display{
+    display: flex;
+    width: 1280px;
+    height: 500px;
+    display: flex;
+    overflow-x: auto;
+    
+}
+
+.hl_display >*{
+    margin: 0px 20px;
+}
+
+
+.hl_display {
+    width: 100%;
+}
+
+.hl{
+    display: flex;
+    max-width: 1280px;
+    margin: 30px;
+}
+
+
+.slide {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+
+.sign-up {
+    display: flex;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.sign-up > * {
+    flex: 1;
+    margin: 70px;
+}
+
+.sign-letter{
+    font-size: x-large;
+}
+
+.sign-up_button{
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    background-color: #7189A1;
+    color: #000;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 6px 50px;
+    outline: solid;
+    outline-color: black;
+    outline-width: thin;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.email {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    padding: 13px;
+    width: 300px;
+}

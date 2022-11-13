@@ -1,0 +1,36 @@
+.shop_welcome > * {
+    flex: 1;
+}
+
+.shop_man {
+    width: 100%;
+}
+
+.shop_welcome-img {
+    width: 100%;
+}
+
+.shop_welcome-text {
+    font-size: xx-large;
+    text-align: center;
+    margin: 100px 160px;
+}
+
+.jacket {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.shop_quote {
+    text-align: center;
+}
+
+.jacket-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.shop_quote{
+    padding-top: 130px;
+}

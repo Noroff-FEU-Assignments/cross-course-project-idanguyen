@@ -15,4 +15,5 @@ Github: https://github.com/Noroff-FEU-Assignments/cross-course-project-idanguyen
 
 #### References
 Scrollbar: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/#aa-with-a-handful-of-lines-of-css-we-can-set-them-next-to-each-other-and-let-them-scroll%20--%3E
-Images from Desgin CA:   https://unsplash.com
+Images from Desgin CS:   https://unsplash.com
+Font: https://fonts.googleapis.com

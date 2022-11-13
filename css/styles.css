@@ -1,6 +1,9 @@
 body,
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
 }
@@ -49,10 +52,45 @@ footer {
 
 }
 
+.test-container {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    background-color: white;
+    overflow: hidden;
+}
 
+.test-container a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
 
+.test-container a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
 
+  .header-logo {
+    flex: 1;
+    align-self: center;
+    width: 150px;
+    height: auto;
+  }
 
+  .header-index-image {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    
+    width: 45%;
+    height: auto;
+  }
 
 
 footer h4 {
@@ -77,28 +115,27 @@ footer h4 {
     margin-top: 10px;
 }
 
-
-
-
-
-
-
-
 /* Links */
 
 a {
     text-decoration: none;
 }
 
-.product-fill {
-    background-color: #D8DCE0;
-    color: #000;
-}
 
 .product-fill h2 {
     font-family: 'Roboto';
     font-weight: 700;
 }
+
+.product-fill {
+    min-width: 279px;
+    width: 10vw;
+    height: auto;
+    text-align: center;
+    background-color: #D8DCE0;
+    color: #000;
+}
+
 
 .cta-button_home {
     font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
@@ -212,13 +249,6 @@ a {
     font-size: xx-large;
     display: block;
     padding: 10px 30px;
-}
-
-.product-fill {
-    min-width: 279px;
-    width: 10vw;
-    height: auto;
-    text-align: center;
 }
 
 
@@ -348,10 +378,12 @@ a {
 .jacket {
     max-width: 1280px;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 .shop_quote {
     text-align: center;
+    padding-top: 130px;
 }
 
 .jacket-list {
@@ -360,9 +392,6 @@ a {
     gap: 20px;
 }
 
-.shop_quote{
-    padding-top: 130px;
-}
 
 /* About us */
 
@@ -398,50 +427,6 @@ a {
 .about-text {
     margin: 30px;
 }
-
-.test-container {
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-    background-color: white;
-    overflow: hidden;
-    
-
-}
-
-.test-container a{
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-.test-container a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-
-  .header-logo {
-    flex: 1;
-    align-self: center;
-    width: 150px;
-    height: auto;
-  }
-
-  .header-index-image {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    
-    width: 45%;
-    height: auto;
-  }
-
 
 /*product specidic*/
 
