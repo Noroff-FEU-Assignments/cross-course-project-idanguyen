@@ -197,8 +197,7 @@ a {
     margin:50px;
 }
 
-.button-container,
-.button-container_men{
+.button-container {
     display: inline;
     position: relative;
 }
