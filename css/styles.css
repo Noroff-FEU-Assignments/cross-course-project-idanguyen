@@ -416,11 +416,6 @@ a {
     color: black;
   }
   
-  /* Add a color to the active/current link */
-  .test-container a.selected {
-    background-color: rgba(0, 0, 255, 0.382);
-    color: white;
-  }
 
   .header-logo {
     flex: 1;
