@@ -5,7 +5,7 @@ This is my my first HTML/CSS project
 ## Process
 I really struggle through this CA compared to the design CA, and had some changes from my Figma prototype. I removed the button from my header because I like it better that way, and all the other changes is to fit the screen or I didn’t had the time. 
 
-### issus
+### issues
 I had a lot of issues but the one I struggle with the most was media Queries. I couldn’t make several Media Queries to work. It only work whit one. I try to search on google and did exact what the video in answers branch did. I also try to copy the one code work and just changing px frame but it wouldn’t work.  
 
 ### Links 
