@@ -169,7 +169,7 @@ a {
 }
 
 
-.cta-button_homehome {
+.cta-button_home {
     font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     background-color: #7189A1;
@@ -574,19 +574,19 @@ a {
 
 .thanks {
 text-align: center;
-margin: 404px 50px 100px 50px;
+margin: 50px;
 }
 
 .thanks-mail{
     text-align: center;
-    margin: 100px 200px 400px 200px;
+    margin: 50px;
 }
 
 /* empty cart */
 
 .empty-cart {
     text-align: center;
-    margin: 150px;
+   margin: 50px auto;
 }
 
 .cart-text {
