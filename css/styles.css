@@ -111,8 +111,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
-    
-    width: 45%;
+    width: 40%;
     height: auto;
   }
 
@@ -183,21 +182,6 @@ a {
     border-radius: 10px;
 }
 
-.cta-button-test {
-    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-    background-color: #ffffff;
-    color: #000;
-    font-size: 0,5em;
-    text-align: center;
-    padding: 1px 12px;
-    outline: solid;
-    outline-color: black;
-    outline-width: thin;
-    border-radius: 4px;
-    
-}
-
 
 /* Homepage */
 
@@ -211,7 +195,7 @@ a {
     background-size: cover;
     background-position-x: top;
     background-position-y: center;
-    min-height: 60vh;
+    min-height: 35vh;
 }
 
 .welcome_content {
@@ -252,6 +236,7 @@ a {
 
 .jacket-categorys > * {
     flex: 1;
+    margin: 10px;
 }
 
 .jacket_imgae {
@@ -259,10 +244,6 @@ a {
     margin: auto;
 }
 
-.jacket_women,
-.jacket_men {
-    margin:50px;
-}
 
 .button-container {
     display: inline;
@@ -385,7 +366,7 @@ a {
 .shop_welcome {
     display: flex;
     max-width: 1280;
-    margin: 50px auto;
+    margin: 30px auto;
     flex-direction: column;
 }
 
@@ -464,7 +445,7 @@ a {
 .campion-jacket {
     display: flex;
     max-width: 1280px;
-    margin: 50px;
+    margin: 50px 10px;
     flex-direction: column;
 }
 
@@ -496,18 +477,21 @@ a {
     margin: 50px 0px;
 }
 
-.campion-button {
-    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-    background-color: #7189A1;
+.campion-jacket-pic {
+    width: 100%;
+}
+
+.size {
+    background-color: #ffffff;
     color: #000;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 11px 18px;
+    font-size: 0,5em;
+    padding: 1px 12px;
+    border-radius: 4px;
     outline: solid;
     outline-color: black;
     outline-width: thin;
-    border-radius: 50px;
+    border-radius: 10px;
+    
 }
 
 /* cart */
@@ -516,7 +500,7 @@ a {
     display: flex;
     max-width: 1280px;
     flex-direction: column;
-    margin: 20px;
+    margin: 30px auto;
     
 
 }
@@ -586,7 +570,7 @@ margin: 50px;
 
 .empty-cart {
     text-align: center;
-   margin: 50px auto;
+   margin: 90px auto;
 }
 
 .cart-text {
@@ -658,10 +642,22 @@ margin: 50px;
         flex-direction: row;
     }
 
+    .cta {
+        padding: 25px 50px;
+        font-size: 2em;
+    }
+
+    .welcome {
+        min-height: 50vh;
+    }
+
 }
 
 @media (min-width: 800px) {
-    .jacket-categorys {
+    .jacket-categorys,
+    .our-vision,
+    .about-us,
+    .cart {
         flex-direction: row;
     }
     .info > * {
@@ -690,14 +686,20 @@ margin: 50px;
         margin: 10px;
      }
 
-     .cta-button_homehomehome {
-        padding: 25px 50px;
-        font-size: 2em;
+    .cart > * {
+        margin: 10px;
     }
 
-    .our-vision,
-    .about-us {
-        flex-direction: row;
+    .welcome {
+        min-height: 60vh;
+    }
+
+    .header-index-image {
+        width: 30%;
+    }
+
+    .cart {
+        margin: 100px 50px;
     }
 
 }
@@ -713,15 +715,6 @@ margin: 50px;
         flex-direction: row;
     }
 
-    .cart {
-        flex-direction: row;
-        margin: 120px 50px;
-    }
-
-    .cart > * {
-        margin: 120px 50px;
-    }
-
     .thanks-mail {
         margin-bottom: 150px;
     }
@@ -729,5 +722,6 @@ margin: 50px;
     .thanks {
         margin: 50px auto;
     }
+
 
 }
