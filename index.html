@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0">
   <meta name="description" content="Find The right Rainydays jacket for you next adventure">
   <title>Rainydays | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9376ed08d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
-      <section class="header_top">
-        <h5>3-5 days delivery</h5>
-      </section>
+  <header>
+    <section class="header_top">
+      <h5>3-5 days delivery</h5>
+    </section>
+    <div class="header-bar bar-main">
+      <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
+      <nav class="nav-main nav-main-bar">
+        <ul>
+          <li><a href="shop.html">MEN</a></li>
+          <li><a href="shop.html">WOMEN</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+      </nav>
       <div class="header-bar">
-        <div class="header-bar">
-          <a href="shop.html">MEN</a>
-          <a href="shop.html">WOMEN</a>
-          <a href="aboutus.html">ABOUT US</a>
-        </div>
-        <div class="header-bar">
-
-        <a href="cart.html"><img src="images/Cart.png" alt="Cart"></a>
-        </div>
+      <a href="cart.html"><img src="images/Cart.png" alt="Cart"></a>
       </div>
-    </header>
+    </div>
+    <div class="header_main"></div> 
+  </header>
 
   <main>
 
@@ -173,13 +179,14 @@
         <p>+47 99 99 99</p>
       </div>
       <div class="info-delivery">
-        <div><img src="images/deliverycar.png" alt="Delivery" />
+        <div class="deliver-car">
+          <img src="images/deliverycar.png" alt="Delivery car" />
         </div>
         <p>3-5 days Delivery</p>
       </div>
       <div>
-        <div class="info-delivery">
-          <img src="images/wwshipping.png" alt="Shipping world wide" />
+        <div class="delivery-shipping">
+          <img src="images/wwshipping.png" alt="Shipping world wide globe" />
         </div>
         <p>Worldwide Shipping</p>
       </div>

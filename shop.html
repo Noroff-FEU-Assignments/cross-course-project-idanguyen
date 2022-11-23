@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0">
   <meta name="description" content="View a List of high quality jackets from Rainydays">
   <title>Rainydays | jacket</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9376ed08d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -21,11 +23,15 @@
       <h5>3-5 days delivery</h5>
     </section>
     <div class="header-bar">
-      <div class="header-bar">
-        <a href="shop.html">MEN</a>
-        <a href="shop.html">WOMEN</a>
-        <a href="aboutus.html">ABOUT US</a>
-      </div>
+      <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
+      <nav class="nav-main">
+        <ul>
+          <li><a href="shop.html">MEN</a></li>
+          <li><a href="shop.html">WOMEN</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+      </nav>
       <div class="header-bar">
         <a href="index.html"><img src="images/RainyDays_Logo.png" alt="" class="header-logo"></a>
       </div>
@@ -106,7 +112,7 @@
   <footer>
     <section class="info">
       <div>
-        <h4>RAINYDAYS</h4>
+        <h3>RAINYDAYS</h3>
         <nav>
           <ul>
             <li><a href="shop.html">Women</a></li>
@@ -116,32 +122,32 @@
         </nav>
       </div>
       <div>
-        <h4>LOCATION</h4>
+        <h3>LOCATION</h3>
         <p>Rainydays</p>
         <p>Main Street 999 0999,</p>
         <p>Oslo Norway</p>
 
       </div>
       <div>
-        <h4>CONTACT</h4>
+        <h3>CONTACT</h3>
         <p>support@rainydays.com </p>
         <p>+47 99 99 99</p>
       </div>
       <div class="info-delivery">
-        <div><img src="images/deliverycar.png" alt="Delivery" />
+        <div><img src="images/deliverycar.png" alt="Delivery car" />
         </div>
         <p>3-5 days Delivery</p>
       </div>
-      <div>
-        <div class="info-delivery">
-          <img src="images/wwshipping.png" alt="Shipping world wide" />
+      <div class="info-delivery">
+        <div>
+          <img src="images/wwshipping.png" alt="Shipping world wide globe" />
         </div>
         <p>Worldwide Shipping</p>
       </div>
     </section>
     <div>
-      <a href="https://nb-no.facebook.com/"><img src="images/facebook.png" alt="facebook link"></a>
-      <a href="https://instagram.com/"><img src="images/Instagram.png" alt="instagram link"></a>
+      <a href="https://nb-no.facebook.com/"><img src="images/facebook.png" alt="facebook logo"></a>
+      <a href="https://instagram.com/"><img src="images/Instagram.png" alt="instagram logo"></a>
     </div>
   </footer>
 </body>
