@@ -20,21 +20,6 @@
       src="https://kit.fontawesome.com/9376ed08d8.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 3423972, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
   <body>
     <header>
@@ -57,7 +42,7 @@
           /></a>
         </div>
         <div class="header-bar">
-          <a href="cart.html"><img src="images/Cart.png" alt="Cart" /></a>
+          <a href="cart-empty.html"><img src="images/Cart.png" alt="Cart" /></a>
         </div>
       </div>
       <div class="header_main"></div>
@@ -76,96 +61,7 @@
           />
         </div>
       </section>
-      <section class="jacket-list">
-        <div class="product-fill">
-          <div>
-            <a href="product-specific.html"
-              ><img
-                src="images/RainyDays_Jacket1.png"
-                alt="CAMPION PRO JACKET"
-                class="product_size-shop"
-            /></a>
-          </div>
-          <h3>CAMPION PRO JACKET</h3>
-          <p>Gore-tex technology, 100% watherproof, optimum breathability.</p>
-          <p>$ 269.00</p>
-        </div>
-        <div class="product-fill">
-          <img
-            src="images/RainyDays_Jacket2.png"
-            alt="BASE WIGHT JACKET"
-            class="product_size-shop"
-          />
-          <h3>BASE WIGHT JACKET</h3>
-          <p>Comfortable, lightwight, layaring, packeble, rycycled material</p>
-          <p>$ 149.00</p>
-        </div>
-        <div class="product-fill">
-          <img
-            src="images/RainyDays_Jacket3.png"
-            alt="HAPPY TRAILS JACKET"
-            class="product_size-shop"
-          />
-          <h3>HAPPY TRAILS JACKET</h3>
-          <p>100% watherproof, comfortable, breathable, lightwight, packeble</p>
-          <p>$ 169.00</p>
-        </div>
-        <div class="product-fill">
-          <img
-            src="images/RainyDays_Jacket4.png"
-            alt="EXPLORE BETA JACKET"
-            class="product_size-shop"
-          />
-          <h3>EXPLORE BETA JACKET</h3>
-          <p>Gore-tex technology, 100% watherproof, windproof, lightwight.</p>
-          <p>$ 299.00</p>
-        </div>
-        <div class="product-fill">
-          <img
-            src="images/RainyDays_Jacket5.png"
-            alt="LEAVE NO TRACE JACKET"
-            class="product_size-shop"
-          />
-          <h3>LEAVE NO TRACE JACKET</h3>
-          <p>2 stretch layer, windproof, rycyled material, comfortable.</p>
-          <p>$ 269.00</p>
-        </div>
-        <div class="product-fill">
-          <img
-            src="images/RainyDays_Jacket6.png"
-            alt="CAT PRO JACKET"
-            class="product_size-shop"
-          />
-          <h3>CAT PRO JACKET</h3>
-          <p>
-            Gore-tex technology, 100% watherproof, windproof, 2-1
-            jacket,lightwight.
-          </p>
-          <p>$ 299.00</p>
-        </div>
-        <div class="product-fill">
-          <img
-            src="images/RainyDays_Jacket7.png"
-            alt="CAMP FLEECE JACKET"
-            class="product_size-shop"
-          />
-          <h3>CAMP FLEECE JACKET</h3>
-          <p>
-            lightwight, recycled material, comfortable, stretch fleece,
-            packeble.
-          </p>
-          <p>$ 269.00</p>
-        </div>
-        <div class="product-fill">
-          <div class="shop_quote">
-            <p>
-              WHEN LIFE GIVES YOU MOUNTAINS, PUT ON YOUR RAINYDAYS JACKET AND
-              HIKE
-            </p>
-            <img src="images/Leaf.png" alt="leaf" />
-          </div>
-        </div>
-      </section>
+      <div class="jacketContainer"></div>
     </main>
 
     <footer>
@@ -211,5 +107,6 @@
         /></a>
       </div>
     </footer>
+    <script src="js/shop.js"></script>
   </body>
 </html>
