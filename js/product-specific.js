@@ -31,11 +31,11 @@ async function displayDetails(uri) {
         <p>${results.prices.price} ${results.prices.currency_code}</p>
         <p>Select Size : <output type="text" id="size">S</p>
         <div class="campion-size">
-          <button id="S" class="size"   onclick=buttonSelection("S")>${results.attributes[0].terms[0].name}</button>
-          <button id="M" class="size"   onclick=buttonSelection("M")>${results.attributes[0].terms[1].name}</button>
-          <button id="L" class="size"   onclick=buttonSelection("L")>${results.attributes[0].terms[2].name}</button>
-          <button id="XL" class="size"  onclick=buttonSelection("XL")>${results.attributes[0].terms[3].name}</button>
-          <button id="XXL" class="size" onclick=buttonSelection("XXL")>${results.attributes[0].terms[4].name}</button>
+          <button id="S" class="size"   onclick=buttonSelection("XS")>${results.attributes[0].terms[0].name}</button>
+          <button id="M" class="size"   onclick=buttonSelection("S")>${results.attributes[0].terms[1].name}</button>
+          <button id="L" class="size"   onclick=buttonSelection("M")>${results.attributes[0].terms[2].name}</button>
+          <button id="XL" class="size"  onclick=buttonSelection("L")>${results.attributes[0].terms[3].name}</button>
+          <button id="XXL" class="size" onclick=buttonSelection("XL")>${results.attributes[0].terms[4].name}</button>
         </div>
         <div class="campion-basket">
           <a class="cta-button_home"  id="basket" href="#" onclick="changeLocation();return false;">Add To Basket</a>
