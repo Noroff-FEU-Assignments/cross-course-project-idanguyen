@@ -1,99 +1,57 @@
-let jackets = [
-    jacket1 = {
-        "id": 1,
-        "name": "CAMPION PRO JACKET",
-        "price": 299,
-        "desc": "Gore-tex technology, 100% watherproof, optimum breathability.",
-        "img": "images/RainyDays_Jacket1.png",
-        "alt":"CAMPION PRO JACKET"
-    },
-    jacket2 = {
-        "id": 2,
-        "name": "BASE WIGHT JACKET",
-        "price": 299,
-        "desc": "Comfortable, lightwight, layaring, packeble, rycycled material.",
-        "img": "images/RainyDays_Jacket2.png",
-        "alt": "BASE WIGHT JACKET"
-    },
-    jacket3 = {
-        "id": 3,
-        "name": "HAPPY TRAILS JACKET",
-        "price": 499,
-        "desc": "100% watherproof, comfortable, breathable, lightwight, packeble.",
-        "img": "images/RainyDays_Jacket3.png",
-        "alt": "HAPPY TRAILS JACKET"
-    },
-    jacket4 = {
-        "id": 4,
-        "name": "EXPLORE BETA JACKET",
-        "price": 399,
-        "desc": "Gore-tex technology, 100% watherproof, windproof, lightwight.",
-        "img": "images/RainyDays_Jacket4.png",
-        "alt": "EXPLORE BETA JACKET"
-    },
-    jacket5 = {
-        "id": 5,
-        "name": "LEAVE NO TRACE JACKET",
-        "price": 699,
-        "desc": "2 stretch layer, windproof, rycyled material, comfortable.",
-        "img": "images/RainyDays_Jacket5.png",
-        "alt": "LEAVE NO TRACE JACKET"
-    },
-    jacket6 = {
-        "id": 6,
-        "name": "CAT PRO JACKET",
-        "price": 199,
-        "desc": "Gore-tex technology, 100% watherproof, windproof, 2-1 jacket,lightwight.",
-        "img": "images/RainyDays_Jacket6.png",
-        "alt": "CAT PRO JACKET"
-    },
-    jacket7 = {
-        "id": 7,
-        "name": "CAMP FLEECE JACKET",
-        "price": 99,
-        "desc": "lightwight, recycled material, comfortable, stretch fleece, packeble.",
-        "img": "images/RainyDays_Jacket7.png",
-        "alt": "CAMP FLEECE JACKET"
-    }
-];
+const uri = "https://www.idanhu.com/wp-json/wc/store/products";
+
+const uriFeatured =
+  "https://www.idanhu.com/wp-json/wc/store/products?featured=true";
 
 let jacketContainer = document.querySelector(".jacketContainer");
 let emailContainer = document.querySelector(".emailContainer");
 
-let jacketList = "";
+let toggled = false;
+
 jacketContainer.innerHTML = "";
 emailContainer.innerHTML = "";
 
-function displayFeatured() {
-    jacketList += 
-    `
+async function getJackets(uri) {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  try {
+    const response = await fetch(uri);
+    const results = await response.json();
+    let display = `
     <div class="hl_favorites">
         <h1>OUR FAVORITES</h1>
         <img src="images/Leaf.png" alt="Leaf" />
     </div>
     <div class="hl_display">
-    `
-    for (let i = 0; i < jackets.length; i++) {
-        jacketList +=
-        `
-        <div class="product-fill">
-          <div>
-            <a href="product-specific.html?id=${jackets[i].id}"><img src="${jackets[i].img}" alt="${jackets[i].alt}" class="product_size-shop" ></a>
-          </div>
-          <h3>${jackets[i].name}</h3>
-          <p>${jackets[i].desc}</p>
-          <p>$ ${jackets[i].price}</p>
-        </div>
-        `;
-    }
-    jacketList += 
-    `
-    </div>
-    </div>`
-    ;
+    `;
 
-  jacketContainer.innerHTML += 
-  '<section class="hl">' + jacketList + '</section>'
+    jacketContainer.innerHTML = "";
+
+    for (let i = 0; i < results.length; i++) {
+      display += `
+      <div class="product-fill">
+        <div>
+          <a href="product-specific.html?id=${results[i].id}"><img src="${results[i].images[0].thumbnail}" alt="${results[i].images[0].alt}" class="product_size-shop" ></a>
+        </div>
+        <h3>${results[i].name}</h3>
+        <p>${results[i].description}</p>
+        <p>${results[i].prices.price} ${results[i].prices.currency_code}</p>
+      </div>
+      `;
+    }
+    jacketContainer.innerHTML +=
+      '<section class="hl">' + display + "</section>";
+  } catch (error) {
+    alert(error);
+  }
+}
+
+function toggleFeatured() {
+  toggled = !toggled;
+  if (toggled) {
+    getJackets(uriFeatured);
+  } else {
+    getJackets(uri);
+  }
 }
 
 /*
@@ -102,10 +60,8 @@ https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in
 combining the answers of @ImmortalFirefly and @OregonTrail
 */
 
-
 function displayNewsletter() {
-    let html = 
-    `
+  let html = `
     <div class= "sign-letter">
     <h3>JOIN THE ADVENTURE!</h3> 
     <p>SIGN UP TO OUR NEWSLETTER</p>
@@ -121,33 +77,29 @@ function displayNewsletter() {
       <button id="submitBtn" type="submit" value="SIGN UP" class="sign-up_button" disabled=true>Updates</button>
     </form>
   </div>
-    `
-    emailContainer.innerHTML +=
-    '<section class="sign-up">' + html + '</section>'
+    `;
+  emailContainer.innerHTML += '<section class="sign-up">' + html + "</section>";
 
-    let submitBtn = document.getElementById("submitBtn");
-    let checkbox = document.getElementById("email-updates");
-    let email = document.getElementById("email");
-
+  let submitBtn = document.getElementById("submitBtn");
+  let checkbox = document.getElementById("email-updates");
+  let email = document.getElementById("email");
 
   document.getElementById("email-updates").onchange = function () {
-    if(checkbox.checked && /\S+@\S+\.\S+/.test(email.value)) {
+    if (checkbox.checked && /\S+@\S+\.\S+/.test(email.value)) {
       submitBtn.disabled = false;
-    } else{
+    } else {
       submitBtn.disabled = true;
     }
-
   };
 
   document.getElementById("email").onchange = function () {
-    if(checkbox.checked && /\S+@\S+\.\S+/.test(email.value)) {
+    if (checkbox.checked && /\S+@\S+\.\S+/.test(email.value)) {
       submitBtn.disabled = false;
-    } else{
+    } else {
       submitBtn.disabled = true;
     }
-}
+  };
 }
 
-displayFeatured();
+getJackets(uri);
 displayNewsletter();
-

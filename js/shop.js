@@ -1,82 +1,30 @@
-let jackets = [
-jacket1 = {
-    "id": 1,
-    "name": "CAMPION PRO JACKET",
-    "price": 299,
-    "desc": "Gore-tex technology, 100% watherproof, optimum breathability.",
-    "img": "images/RainyDays_Jacket1.png",
-    "alt":"CAMPION PRO JACKET"
-},
-jacket2 = {
-    "id": 2,
-    "name": "BASE WIGHT JACKET",
-    "price": 299,
-    "desc": "Comfortable, lightwight, layaring, packeble, rycycled material",
-    "img": "images/RainyDays_Jacket2.png",
-    "alt": "BASE WIGHT JACKET"
-},
-jacket3 = {
-    "id": 3,
-    "name": "HAPPY TRAILS JACKET",
-    "price": 499,
-    "desc": "100% watherproof, comfortable, breathable, lightwight, packeble",
-    "img": "images/RainyDays_Jacket3.png",
-    "alt": "HAPPY TRAILS JACKET"
-},
-jacket4 = {
-    "id": 4,
-    "name": "EXPLORE BETA JACKET",
-    "price": 399,
-    "desc": "Gore-tex technology, 100% watherproof, windproof, lightwight.",
-    "img": "images/RainyDays_Jacket4.png",
-    "alt": "EXPLORE BETA JACKET"
-},
-jacket5 = {
-    "id": 5,
-    "name": "LEAVE NO TRACE JACKET",
-    "price": 699,
-    "desc": "2 stretch layer, windproof, rycyled material, comfortable.",
-    "img": "images/RainyDays_Jacket5.png",
-    "alt": "LEAVE NO TRACE JACKET"
-},
-jacket6 = {
-    "id": 6,
-    "name": "CAT PRO JACKET",
-    "price": 199,
-    "desc": "Gore-tex technology, 100% watherproof, windproof, 2-1 jacket,lightwight.",
-    "img": "images/RainyDays_Jacket6.png",
-    "alt": "CAT PRO JACKET"
-},
-jacket7 = {
-    "id": 7,
-    "name": "CAMP FLEECE JACKET",
-    "price": 99,
-    "desc": "lightwight, recycled material, comfortable, stretch fleece, packeble.",
-    "img": "images/RainyDays_Jacket7.png",
-    "alt": "CAMP FLEECE JACKET"
-}
-];
+const uri = "https://www.idanhu.com/wp-json/wc/store/products";
+const uriFeatured =
+  "https://www.idanhu.com/wp-json/wc/store/products?featured=true";
+
 let jacketContainer = document.querySelector(".jacketContainer");
-let jacketList = "";
-jacketContainer.innerHTML = "";
+let toggled = false;
 
+async function getJackets(uri) {
+  try {
+    const response = await fetch(uri);
+    const results = await response.json();
+    let jacketList = "";
+    jacketContainer.innerHTML = "";
 
-function getJackets() {
-    for (let i = 0; i < jackets.length; i++) {
-        jacketList +=
-        `
+    for (let i = 0; i < results.length; i++) {
+      jacketList += `
         <div class="product-fill">
           <div>
-            <a href="product-specific.html?id=${jackets[i].id}"><img src="${jackets[i].img}" alt="${jackets[i].alt}" class="product_size-shop" ></a>
+            <a href="product-specific.html?id=${results[i].id}"><img src="${results[i].images[0].thumbnail}" alt="${results[i].images[0].alt}" class="product_size-shop" ></a>
           </div>
-          <h3>${jackets[i].name}</h3>
-          <p>${jackets[i].desc}</p>
-          <p>$ ${jackets[i].price}</p>
+          <h3>${results[i].name}</h3>
+          <p>${results[i].description}</p>
+          <p>${results[i].prices.price} ${results[i].prices.currency_code}</p>
         </div>
         `;
     }
-    jacketList += 
-    `
+    jacketList += `
     <div class="product-fill">
     <div class="shop_quote">
       <p>WHEN LIFE GIVES YOU MOUNTAINS, PUT ON YOUR RAINYDAYS JACKET AND HIKE</p>
@@ -86,8 +34,20 @@ function getJackets() {
     </section>
   `;
 
-  jacketContainer.innerHTML += 
-  '<section class="jacket-list">' + jacketList + '</section>'
+    jacketContainer.innerHTML +=
+      '<section class="jacket-list">' + jacketList + "</section>";
+  } catch (error) {
+    alert(error);
+  }
 }
 
-getJackets();
+function toggleFeatured() {
+  toggled = !toggled;
+  if (toggled) {
+    getJackets(uriFeatured);
+  } else {
+    getJackets(uri);
+  }
+}
+
+getJackets(uri);

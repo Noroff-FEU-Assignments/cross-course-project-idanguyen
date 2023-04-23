@@ -542,6 +542,21 @@ a {
   color: #000000;
 }
 
+.featured {
+  text-align: center;
+  margin: 10px auto;
+  font-weight: 400;
+}
+
+.featured-shop {
+  margin: 20px auto;
+  font-weight: 400;
+}
+
+.featured-main {
+  font-weight: 400;
+}
+
 /* media */
 
 @media (min-width: 400px) {
