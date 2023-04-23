@@ -1,5 +1,4 @@
-const uri =
-  "https://www.idanhu.com/wp-json/wc/store/products";
+const uri = "https://www.idanhu.com/wp-json/wc/store/products";
 
 let cartContainer = document.querySelector(".cartContainer");
 let orderSummary = "";
@@ -14,15 +13,12 @@ function getParameter(paramenter) {
 async function displayCart(uri) {
   let size = getParameter("size");
 
-
-
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   try {
     const response = await fetch(uri);
     const results = await response.json();
-    
-  let shipping = results.prices.price + 100.00;
-  orderSummary += `
+
+    let shipping = results.prices.price + 100.0;
+    orderSummary += `
       <h1> ORDER SUMMARY</h1>
       <div class="order-sum">
         <div class="order-jacket-camp">
@@ -39,7 +35,7 @@ async function displayCart(uri) {
         </div>
       </div>
     `;
-  totalSum += `
+    totalSum += `
     <h1>TOTAL SUM </h1>
       <div class="total-content">
         <div class="total">
@@ -60,19 +56,16 @@ async function displayCart(uri) {
     </div>
       `;
 
-  cartContainer.innerHTML +=
-    '<section class="order-summary">' +
-    orderSummary +
-    "</section>" +
-    "<section>" +
-    totalSum +
-    "</section>";
-
+    cartContainer.innerHTML +=
+      '<section class="order-summary">' +
+      orderSummary +
+      "</section>" +
+      "<section>" +
+      totalSum +
+      "</section>";
+  } catch (error) {
+    alert(error);
   }
-  catch (error) {
-  alert(error);
 }
 
-}
-
-displayCart(uri+"/"+getParameter("id"));
+displayCart(uri + "/" + getParameter("id"));

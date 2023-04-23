@@ -12,7 +12,6 @@ jacketContainer.innerHTML = "";
 emailContainer.innerHTML = "";
 
 async function getJackets(uri) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   try {
     const response = await fetch(uri);
     const results = await response.json();

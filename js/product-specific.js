@@ -19,7 +19,6 @@ function changeLocation() {
 }
 
 async function displayDetails(uri) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   try {
     const response = await fetch(uri);
     const results = await response.json();
